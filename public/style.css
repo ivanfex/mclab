@@ -19,6 +19,14 @@ ul {
     padding: 0 !important;
 }
 
+.menuItem {
+    font-family: 'Raleway', sans-serif;
+}
+
+.menuItemBorder {
+    border-bottom: .25em solid #8BC141;
+}
+
 .title {
     font-weight: 600;
     color: #8BC141;
@@ -71,16 +79,25 @@ img {
     margin: 1em;
 }
 
+a:link, a:visited { 
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:link:active, a:visited:active { 
+    color: black;
+}
 
 .nav-button {
     position: absolute;
 }
 
 .button-primary{
-    background-color:#4caf50;
+    background-color:#8BC141;
     color:#fff;
-    border-color:#4caf50;
-    font-weight: 600;
+    border-color:#8BC142;
+    font-weight: 500;
     font-size: 1.2em;
 }
 

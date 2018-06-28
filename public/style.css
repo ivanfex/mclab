@@ -56,12 +56,100 @@ p {
 }
 
 .box {
-    background-color: #FAFAFA;
+    background-color: rgba(69, 69, 69, .75);
     display: flex;
     flex-direction: row;
-    border-radius: 1%;
+    border-radius: 2em;
+    color: #FAFAFA
+}
+
+.box-text {
+    padding: 1vw;
 }
 
 img {
     margin: 1em;
+}
+
+
+.nav-button {
+    position: absolute;
+}
+
+.button-primary{
+    background-color:#4caf50;
+    color:#fff;
+    border-color:#4caf50;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.button-round{
+    border-radius:24px
+}
+
+button > span {
+    padding: 1em;
+}
+
+.slide {
+    background-size: cover !important;
+}
+
+/* First Section Images */
+#slide1-1{
+    background-image: url("https://changingwinds.files.wordpress.com/2017/12/teams.jpg");
+}
+
+#slide1-2{
+    background-image: url("https://assets.aspeninstitute.org/content/uploads/2016/06/Team-Unity-Friends-Meeting-Partnership-Concept-000090609447_Large.jpg");
+}
+
+#slide1-3{
+    background-image: url("https://huberwindowcleaning.com/wp-content/uploads/2016/08/IMG_0212-1917.jpg");
+}
+
+#slide1-4{
+    background-image: url("https://cdn-images-1.medium.com/max/1600/1*aBX5fZSKhMBe17guY86pOA.png");
+}
+
+/* Second Section Images */
+#slide2-1{
+    background-image: url("http://www.imperial.ac.uk/ImageCropToolT4/imageTool/uploaded-images/Community-image-1--tojpeg_1493885512973_x2.jpg");
+}
+
+#slide2-2{
+    background-image: url("http://solacc.edu/sites/default/files/Homepage-small-TG8_0062_0.jpg");
+}
+
+#slide2-3{
+    background-image: url("https://www.maricopa.edu/sites/default/files/2017-10/phx-community.jpg");
+}
+
+#slide2-4{
+    background-image: url("https://www.nyrp.org/uploads/gallery/12_Target_Bronx_Gallery1_BANNER_OPT_1.JPG");
+}
+
+#slide2-5{
+    background-image: url("https://static01.nyt.com/images/2017/03/05/realestate/05BRONXCOV1/05BRONXCOV1-superJumbo.jpg");
+}
+
+#slide3-1{
+    background-image: url("https://changingwinds.files.wordpress.com/2017/12/teams.jpg");
+}
+
+#slide3-2{
+    background-image: url("https://assets.aspeninstitute.org/content/uploads/2016/06/Team-Unity-Friends-Meeting-Partnership-Concept-000090609447_Large.jpg");
+}
+
+#slide3-3{
+    background-image: url("https://huberwindowcleaning.com/wp-content/uploads/2016/08/IMG_0212-1917.jpg");
+}
+
+#slide3-4{
+    background-image: url("https://cdn-images-1.medium.com/max/1600/1*aBX5fZSKhMBe17guY86pOA.png");
+}
+
+#section3 {
+    background-image: url("https://yogahealthcoaching.com/wp-content/uploads/2017/08/group-with-hands-together-large.jpg");
 }

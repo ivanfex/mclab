@@ -1,35 +1,67 @@
-canvas {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-}
-
-.color-selector {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: none;
+.intro {
     display: flex;
-    flex-flow: column nowrap;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
-.marker {
-    width: 40px;
-    height: 40px;
-    box-sizing: border-box;
-    border-radius: 20px;
-    margin-top: 10px; margin-bottom: 10px;
-    transition: box-shadow 113ms, transform 113ms;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-    transform: translate(-3px, -3px);
+.navi {
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(red, green, blue, 0.4)
 }
 
-.marker:first-of-type {
-    margin-top: 0;
+ul {
+    display: flex !important;
+    flex-direction: row !important;
+    list-style-type: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-.marker.selected {
-    box-shadow: none;
-    transform: translate(0, 0);
+.title {
+    font-weight: 600;
+    color: #8BC141;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+}
+.container > li
+{
+  flex:1 1 auto;
+  margin:5px;  /* and that, will result in a 10px gap */
+}
+
+@media all and (max-width: 600px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .container > li {
+        flex-basis: 50%;
+    }
+}
+
+.text {
+    width: 65vw;
+    margin: 1em;
+}
+
+.box {
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: row;
+    border-radius: 1%;
+}
+
+img {
+    margin: 1em;
 }

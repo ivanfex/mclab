@@ -1,3 +1,45 @@
+.modal-mask{
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background:rgba(97,97,97,0.5);
+	z-index:10;
+	display: none;
+}
+.modal{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    position:fixed;
+    top:50%;
+    left:50%;
+    max-width:540px;
+    transform:translate(-50%, -50%);
+    background:#fff;
+    border-radius:5px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(117,117,117,0.5)
+}
+.modal-head{
+    padding:10px 15px
+}
+.modal-head .modal-title{
+    font-size:24px
+}
+.modal-body{
+    flex:1;
+    padding:30px 15px;
+    background:#eee
+}
+.modal-footer{
+    padding:15px
+}
+.modal-footer>*{
+    margin-bottom:0
+}
+
 .intro {
     display: flex;
     align-items: center;
@@ -7,8 +49,9 @@
 
 .navi {
     position: absolute;
-    z-index: 3;
-    background-color: rgba(red, green, blue, 0.4)
+	z-index: 3;
+	width: 100%;
+    background-color: rgba(255, 255, 255, 0.4)
 }
 
 ul {

@@ -15,8 +15,21 @@ $(document).ready(function() {
             clearBorder();
             if(!item.classList.contains('menuItemBorder')) item.classList.add('menuItemBorder');
         })
-    }))
+	}))
 
+	for(let i = 1; i <= 3; i++){
+		console.log(i)
+		let modalButton = document.getElementById(`button-callout${i}`)
+		let modal = document.getElementById(`callout${i}`)
+		modalButton.addEventListener('click', () => {
+			modal.style.display = 'block'
+		})
+
+		modal.addEventListener('click', (e) => {
+			if(e.target.classList.contains('modal-mask')) modal.style.display = 'none'
+		})
+	}
+	
     menuItems[0].dispatchEvent(new Event('click'))
 
     $('#fullpage').fullpage({
@@ -31,16 +44,14 @@ $(document).ready(function() {
             level = destination
             clearBorder()
             if(!menuItems[level - 1].classList.contains('menuItemBorder')) {
-                console.log('moving! adding to class')
                 menuItems[level - 1].dispatchEvent(new Event('click'))
             }
         },
         onSlideLeave: (section, origin, destination)=>{
-            console.log('SLIDER MOVING FROM', origin, 'TO', destination)
+            // console.log('SLIDER MOVING FROM', origin, 'TO', destination)
             clearBorder()
             slide = destination;
-            console.log('s', slide, 'l', level)
-            console.log(items)
+            // console.log('s', slide, 'l', level)
         }
     });
 })

@@ -5,12 +5,14 @@ let level = 0;
 let slide = 0;
 
 $(document).ready(function() {
+	let menuItems = document.getElementsByClassName('menuItem');
+	const clearBorder = () => Array.prototype.forEach.call(menuItems, (item) => {
+		item.classList.remove('menuItemBorder')
+	})
 	if(window.location.pathname.slice(0,2) === '/i'){
+
+		console.log('on index!')
 		for(let i = 1; i <= 3; i++){
-			let menuItems = document.getElementsByClassName('menuItem');
-			const clearBorder = () => Array.prototype.forEach.call(menuItems, (item) => {
-				item.classList.remove('menuItemBorder')
-			})
 
 			Array.prototype.forEach.call(menuItems, (item => {
 				item.addEventListener('click', (ev) => {
@@ -32,6 +34,7 @@ $(document).ready(function() {
 		
 		menuItems[0].dispatchEvent(new Event('click'))
 	}else{
+		console.log('on capacities!')
 		let menuItems = document.getElementsByClassName('menuItem');
 		menuItems[menuItems.length - 1].classList.add('menuItemBorder');
 	}

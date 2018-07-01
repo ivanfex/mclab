@@ -51,7 +51,7 @@
     position: absolute;
 	z-index: 3;
 	width: 100%;
-    background-color: rgba(255, 255, 255, 0.4)
+    background-color: rgba(0, 0, 0, 0.6)
 }
 
 ul {
@@ -79,7 +79,7 @@ ul {
 
 .container {
     display: flex;
-    justify-content: flex-end;
+	justify-content: flex-end;
 }
 
 p {
@@ -123,13 +123,13 @@ img {
 }
 
 a:link, a:visited { 
-    color: black;
+    color: white;
     text-decoration: none;
     cursor: pointer;
 }
 
 a:link:active, a:visited:active { 
-    color: black;
+    color: white;
 }
 
 .nav-button {
@@ -159,6 +159,38 @@ button > span {
 
 .slide {
     background-size: cover !important;
+}
+
+.capacitiesCards {
+
+}
+
+.card{
+	font-family: 'Raleway', sans-serif;
+	width: 20vw;
+    margin:15px;
+    padding:30px;
+    background:#fff;
+    overflow:hidden;
+    border-radius:5px;
+    box-shadow:0 4px 12px rgba(224,224,224,0.5)
+}
+.card-title{
+    font-size:24px;
+    margin-bottom:5px
+}
+.card-actions{
+    display:flex;
+    align-items:center;
+    list-style:none;
+    justify-content:space-around
+}
+
+.card-button {
+    margin-top: 64px;
+}
+.card-actions>*{
+    margin-bottom:0
 }
 
 /* First Section Images */

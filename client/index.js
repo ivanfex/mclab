@@ -9,22 +9,25 @@ $(document).ready(function() {
 	const clearBorder = () => Array.prototype.forEach.call(menuItems, (item) => {
 		item.classList.remove('menuItemBorder')
 	})
-	if(window.location.pathname.slice(0,2) === '/i'){
+	if(window.location.pathname.slice(0,2) !== '/c'){
+		Array.prototype.forEach.call(menuItems, (item => {
+			item.addEventListener('click', (ev) => {
+				clearBorder();
+				if(!item.classList.contains('menuItemBorder')) item.classList.add('menuItemBorder');
+			})
+		}))
 
-		console.log('on index!')
 		for(let i = 1; i <= 3; i++){
-
-			Array.prototype.forEach.call(menuItems, (item => {
-				item.addEventListener('click', (ev) => {
-					clearBorder();
-					if(!item.classList.contains('menuItemBorder')) item.classList.add('menuItemBorder');
-				})
-			}))
-
 			let modalButton = document.getElementById(`button-callout${i}`)
+			let modalCloseButton = document.getElementById(`closecall${i}`)
+
 			let modal = document.getElementById(`callout${i}`)
 			modalButton.addEventListener('click', () => {
 				modal.style.display = 'block'
+			})
+
+			modalCloseButton.addEventListener('click', () => {
+				modal.style.display = 'none'
 			})
 
 			modal.addEventListener('click', (e) => {
@@ -49,7 +52,7 @@ $(document).ready(function() {
         onLeave: (origin, destination)=>{
             console.log('LEVEL MOVING FROM', origin, 'TO', destination)
             level = destination
-            if(window.location.pathname.slice(0,2) === '/i') {
+            if(window.location.pathname.slice(0,2) !== '/c') {
 				clearBorder()
 				if(!menuItems[level - 1].classList.contains('menuItemBorder')) {
 					menuItems[level - 1].dispatchEvent(new Event('click'))

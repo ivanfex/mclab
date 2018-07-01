@@ -9,7 +9,7 @@ $(document).ready(function() {
 	const clearBorder = () => Array.prototype.forEach.call(menuItems, (item) => {
 		item.classList.remove('menuItemBorder')
 	})
-	if(window.location.pathname.slice(0,2) !== '/c'){
+	if(window.location.pathname.slice(0,2) !== '/c' && window.location.pathname.slice(0,2) !== '/t'){
 		Array.prototype.forEach.call(menuItems, (item => {
 			item.addEventListener('click', (ev) => {
 				clearBorder();

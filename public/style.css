@@ -77,6 +77,17 @@ ul {
     font-size: 1.5em;
 }
 
+.subtitle {
+	font-weight: 600;
+    color: #FAFAFA;
+    font-family: 'Lato', sans-serif;
+	font-size: 1em;
+	text-decoration-style: solid;
+	text-decoration: underline;
+	text-decoration-color: #8BC141;
+	text-align: center;
+}
+
 .container {
     display: flex;
 	justify-content: flex-end;
@@ -161,10 +172,6 @@ button > span {
     background-size: cover !important;
 }
 
-.capacitiesCards {
-
-}
-
 .card{
 	font-family: 'Raleway', sans-serif;
 	width: 20vw;
@@ -191,6 +198,10 @@ button > span {
 }
 .card-actions>*{
     margin-bottom:0
+}
+
+.cocreation-text {
+	width: 20vw;
 }
 
 /* First Section Images */

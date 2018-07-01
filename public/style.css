@@ -152,6 +152,11 @@ button > span {
     padding: 1em;
 }
 
+.tools {
+	display: flex;
+	flex-direction: row;
+}
+
 .slide {
     background-size: cover !important;
 }
@@ -211,5 +216,13 @@ button > span {
 }
 
 #section3 {
+    background-image: url("https://yogahealthcoaching.com/wp-content/uploads/2017/08/group-with-hands-together-large.jpg");
+}
+
+#capacities0{
+    background-image: url("https://cdn-images-1.medium.com/max/1600/1*aBX5fZSKhMBe17guY86pOA.png");
+}
+
+#capacities1 {
     background-image: url("https://yogahealthcoaching.com/wp-content/uploads/2017/08/group-with-hands-together-large.jpg");
 }

@@ -10,7 +10,7 @@ $(document).ready(function() {
 		item.classList.remove('menuItemBorder')
 	})
 	let path = window.location.pathname.slice(0,2)
-	if(path !== '/c' && path !== '/t' && path !== '/g'){
+	if(path !== '/c' && path !== '/t' && path !== '/g' && path !== '/a'){
 		Array.prototype.forEach.call(menuItems, (item => {
 			item.addEventListener('click', (ev) => {
 				clearBorder();
@@ -42,6 +42,24 @@ $(document).ready(function() {
 		let menuItems = document.getElementsByClassName('menuItem');
 		if(path === '/c') menuItems[menuItems.length - 1].classList.add('menuItemBorder');
 		else menuItems[0].classList.add('menuItemBorder');
+
+		if(path === '/a'){
+			let modalButton = document.getElementById(`button-callout1`)
+			let modalCloseButton = document.getElementById(`closecall1`)
+
+			let modal = document.getElementById(`callout1`)
+			modalButton.addEventListener('click', () => {
+				modal.style.display = 'block'
+			})
+
+			modalCloseButton.addEventListener('click', () => {
+				modal.style.display = 'none'
+			})
+
+			modal.addEventListener('click', (e) => {
+				if(e.target.classList.contains('modal-mask')) modal.style.display = 'none'
+			})
+		}
 	}
 
     $('#fullpage').fullpage({

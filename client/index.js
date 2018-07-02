@@ -9,7 +9,8 @@ $(document).ready(function() {
 	const clearBorder = () => Array.prototype.forEach.call(menuItems, (item) => {
 		item.classList.remove('menuItemBorder')
 	})
-	if(window.location.pathname.slice(0,2) !== '/c' && window.location.pathname.slice(0,2) !== '/t'){
+	let path = window.location.pathname.slice(0,2)
+	if(path !== '/c' && path !== '/t' && path !== '/g'){
 		Array.prototype.forEach.call(menuItems, (item => {
 			item.addEventListener('click', (ev) => {
 				clearBorder();
@@ -39,7 +40,8 @@ $(document).ready(function() {
 	}else{
 		console.log('on capacities!')
 		let menuItems = document.getElementsByClassName('menuItem');
-		menuItems[menuItems.length - 1].classList.add('menuItemBorder');
+		if(path === '/c') menuItems[menuItems.length - 1].classList.add('menuItemBorder');
+		else menuItems[0].classList.add('menuItemBorder');
 	}
 
     $('#fullpage').fullpage({

@@ -240,6 +240,13 @@ button > span {
 	width: 20vw;
 }
 
+.get-involved-box {
+	width: 100vw;
+	height: 40vh;
+	bottom: 0;
+	border: 1px solid royalblue;
+}
+
 /* First Section Images */
 #slide1-1{
     background-image: url("https://changingwinds.files.wordpress.com/2017/12/teams.jpg");
